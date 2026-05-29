@@ -1,0 +1,56 @@
+/* Style pour la section Nos Églises */
+.church-filters {
+    margin-bottom: 30px;
+}
+
+.church-filters .btn {
+    margin: 0 5px 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 8px 20px;
+    border: 1px solid #ddd;
+}
+
+.church-filters .btn.active {
+    background: #4e73df;
+    color: white;
+    border-color: #4e73df;
+}
+
+.country-group h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color: #2c3e50;
+}
+
+.church-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.church-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.church-list li:last-child {
+    border-bottom: none;
+}
+
+.church-list i {
+    color: #4e73df;
+    margin-right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .church-group {
+        margin-bottom: 30px;
+    }
+}
+/** ADD YOUR AWESOME CODES HERE **/
