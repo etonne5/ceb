@@ -155,7 +155,7 @@
     /* Airtel : Fond Blanc, Bordure & Texte Rouge Officiel */
     .btn-nav-airtel {
         background-color: #DF1414;
-        color: #ff0000 !important;
+        color: #FFFFFF !important;
         border: 1px solid #ff0000;
     }
     .btn-nav-airtel:hover {
