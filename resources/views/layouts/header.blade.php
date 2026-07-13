@@ -20,6 +20,10 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render={{ env('GOOGLE_RECAPTCHA_KEY') }}"></script>
   <style>
     :root {
       --brand: #22c55e;        /* violet spirituel */
@@ -241,7 +245,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link {{ Request::is('eglises') ? 'active' : '' }} py-2" href="{{ route('eglises') }}">Nos Églises</a>
+      <a class="nav-link {{ Request::is('eglises') ? 'active' : '' }} py-2" href="{{ route('eglises') }}">Églises</a>
     </li>
 
     <li class="nav-item">
@@ -250,27 +254,74 @@
 
     <li class="nav-item">
       <a class="btn btn-sm btn-live-gradient rounded-pill px-3" target="_blank" href="https://youtube.com/votrechaine/live">
-        <i class="fa-brands fa-youtube me-1"></i>Live
+        <i class="fa-brands fa-youtube me-1"></i>
       </a>
     </li>
 
-    <!-- INTEGRATION LIENS DONS DIRECTS APRES LE LIVE -->
-    <li class="nav-item d-flex flex-column flex-lg-row gap-2 ms-lg-2 donation-group-mobile">
-      <!-- Airtel Money -->
-      <a class="btn btn-sm btn-donation-nav btn-nav-airtel rounded-pill px-2.5 d-flex align-items-center justify-content-center gap-1.5" 
-         href="tel:*128*X*XXXXXXXXX#">
-        <img src="images/airtelMoney.png" alt="Airtel" class="nav-btn-icon">
-        Airtel 
-      </a>
-
-      <!-- MTN MoMo -->
-      <a class="btn btn-sm btn-donation-nav btn-nav-momo rounded-pill px-2.5 d-flex align-items-center justify-content-center gap-1.5" 
-         href="tel:*105*X*XXXXXXXXX#">
-        <img src="images/mtnMomo.png" alt="MTN" class="nav-btn-icon">
-        Mobile
+    <!-- INTEGRATION LIENS AUTHENTIFICATION CONNEXION & INSCRIPTION AVEC ICONES MODERNES -->
+<li class="nav-item dropdown">
+  <a
+    class="btn btn-sm btn-donation-nav rounded-pill px-3 d-flex align-items-center justify-content-center gap-1.5 dropdown-toggle"
+    href="#"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    <svg class="nav-btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </svg>
+    Compte
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end shadow">
+    <li>
+      <a class="dropdown-item d-flex align-items-center gap-2" href="#connexion">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+          <polyline points="10 17 15 12 10 7" />
+          <line x1="15" y1="12" x2="3" y2="12" />
+        </svg>
+        Connexion
       </a>
     </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center gap-2" href="#inscription">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="8.5" cy="7" r="4" />
+          <line x1="20" y1="8" x2="20" y2="14" />
+          <line x1="23" y1="11" x2="17" y2="11" />
+        </svg>
+        Inscription
+      </a>
+    </li>
+  </ul>
+</li>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
   </ul>
 </div>
     </div>

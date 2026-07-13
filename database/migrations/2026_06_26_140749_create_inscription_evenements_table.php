@@ -6,22 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('inscription_evenements', function (Blueprint $table) {
+        Schema::create('inscriptions_evenements', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('evenement_id')->constrained('evenements')->onDelete('cascade');
+            $table->foreignId('membre_id')->nullable()->constrained('membres')->onDelete('set null');
+            $table->string('email');
+            $table->string('nom');
+            $table->string('telephone')->nullable();
+            $table->integer('nombre_invites')->default(1);
+            $table->enum('statut', ['inscrit','assiste','annule'])->default('inscrit');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('inscription_evenements');
+        Schema::dropIfExists('inscriptions_evenements');
     }
 };

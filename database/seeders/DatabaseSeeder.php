@@ -25,9 +25,12 @@ class DatabaseSeeder extends Seeder
             MesseSeeder::class,
             EvenementSeeder::class,
             DonSeeder::class,
-            PriereSeeder::class,
-            BenevoleSeeder::class,
+            //PriereSeeder::class,
+            //BenevoleSeeder::class,
             AnnonceSeeder::class,
+            SermonSeeder::class,
+            EgliseSeeder::class,
+            DepartementSeeder::class,
         ]);
     }
 }

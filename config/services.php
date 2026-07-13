@@ -35,4 +35,16 @@ return [
         ],
     ],
 
+    // 👇 AJOUTEZ CE BLOC POUR TWILIO
+    'twilio' => [
+        'account_sid' => env('TWILIO_SID'),
+        'auth_token' => env('TWILIO_TOKEN'),
+        'from' => env('TWILIO_FROM'),
+
+        // Désactiver la vérification SSL (développement uniquement)
+    'http_client' => [
+        'verify' => false,
+    ],
+    ],
+
 ];

@@ -6,20 +6,22 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('prieres', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('membre_id')->nullable()->constrained('membres')->onDelete('set null');
+            $table->string('titre');
+            $table->text('description');
+            $table->enum('type', ['Action_de_grace','Intercession','Guerison','Autre'])->default('Autre');
+            $table->enum('statut', ['active','exaucee','archivee'])->default('active');
+            $table->boolean('est_public')->default(false);
+            $table->integer('nombre_prieres')->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('prieres');

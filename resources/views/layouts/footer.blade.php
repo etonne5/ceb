@@ -17,6 +17,24 @@
           <div class="d-flex gap-2">
             <a class="btn btn-sm btn-live-gradient rounded-pill px-3" target="_blank" href="https://youtube.com/votrechaine/live"><i class="fa-brands fa-youtube me-1"></i> Live</a>
             <a  class="btn btn-sm btn-brand rounded-pill px-3" href="#contact"><i class="fa-regular fa-envelope me-1"></i> Contact</a>
+
+
+             <!-- INTEGRATION LIENS DONS DIRECTS APRES LE LIVE -->
+    <li class="nav-item d-flex flex-column flex-lg-row gap-2 ms-lg-2 donation-group-mobile">
+      <!-- Airtel Money -->
+      <a class="btn btn-sm btn-donation-nav btn-nav-airtel rounded-pill px-2.5 d-flex align-items-center justify-content-center gap-1.5" 
+         href="tel:*128*X*XXXXXXXXX#">
+        <img src="images/airtelMoney.png" alt="Airtel" class="nav-btn-icon">
+        Airtel 
+      </a>
+
+      <!-- MTN MoMo -->
+      <a class="btn btn-sm btn-donation-nav btn-nav-momo rounded-pill px-2.5 d-flex align-items-center justify-content-center gap-1.5" 
+         href="tel:*105*X*XXXXXXXXX#">
+        <img src="images/mtnMomo.png" alt="MTN" class="nav-btn-icon">
+        Mobile
+      </a>
+    </li>
           </div>
         </div>
 

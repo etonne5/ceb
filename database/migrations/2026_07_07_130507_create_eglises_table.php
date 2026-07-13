@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('eglises', function (Blueprint $table) {
+            $table->id();
+            $table->string('nom');
+            $table->text('description')->nullable();
+            $table->string('adresse');
+            $table->string('ville');
+            $table->string('code_postal')->nullable();
+            $table->string('telephone')->nullable();
+            $table->string('email')->nullable();
+            $table->string('image')->nullable();
+            $table->enum('pays', ['Congo', 'France', 'Belgique', 'Suisse', 'Canada', 'Autre'])->default('Congo');
+            $table->decimal('latitude', 10, 7)->nullable();
+            $table->decimal('longitude', 10, 7)->nullable();
+            $table->string('pasteur')->nullable();
+            $table->integer('capacite')->nullable();
+            $table->text('horaires_culte')->nullable();
+            $table->boolean('est_active')->default(true);
+            $table->timestamps();
+            $table->softDeletes();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('eglises');
+    }
+};
